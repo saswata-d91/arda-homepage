@@ -1,0 +1,16 @@
+# Environment & Secrets
+.env
+*.local
+
+# Graph Data / Cypher Scripts (Policy: Untracked to prevent repo bloat)
+*.cypher
+
+# Dependencies & Build Artefacts
+node_modules/
+dist/
+build/
+.next/
+
+# OS Files
+.DS_Store
+Thumbs.db

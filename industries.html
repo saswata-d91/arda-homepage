@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industries & Healthcare Service Lines | CuraSync</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="CuraSync Homepage">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="180">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="industries.html" class="nav-link active">Industries</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="health-check.html" class="nav-link">RCM Assessment</a>
+        <a href="case-studies.html" class="nav-link">Case studies</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA & Hamburger -->
+      <div class="header-actions">
+        <a href="health-check.html" class="btn btn-primary btn-sm">Get Your RCM Health Check →</a>
+        <button class="mobile-nav-toggle" id="openDrawerBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="assets/images/logo.svg" alt="CuraSync" width="150">
+      <button class="modal-close" id="closeDrawerBtn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-nav" aria-label="Mobile Navigation Links">
+        <a href="services.html" class="drawer-link">Services</a>
+        <a href="industries.html" class="drawer-link active">Industries</a>
+        <a href="about.html" class="drawer-link">About</a>
+        <a href="health-check.html" class="drawer-link">RCM Revenue Health Check</a>
+        <a href="case-studies.html" class="drawer-link">Case studies</a>
+        <a href="blog.html" class="drawer-link">Blog & Resources</a>
+        <a href="testimonials.html" class="drawer-link">Testimonials</a>
+        <a href="careers.html" class="drawer-link">Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+      <div class="drawer-footer-cta">
+        <a href="health-check.html" class="btn btn-primary btn-block">Get Your RCM Health Check →</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         PAGE HERO
+         ========================================================================== -->
+    <section class="page-hero bg-subtle">
+      <div class="container text-center">
+        <span class="badge badge-teal">WHO WE SUPPORT</span>
+        <h1>Revenue operations across different care settings.</h1>
+        <p class="page-hero-sub">Organizations have different service lines, reimbursement pressures, and patient access patterns. Our support starts with those realities.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CARE SETTING DEEP-DIVE CARDS
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2-col">
+          <div class="card card-hover">
+            <div class="card-body">
+              <span class="badge badge-navy">HOSPITALS & HEALTH SYSTEMS</span>
+              <h3 style="margin-top: 0.75rem;">Multi-Facility & Inpatient Operations</h3>
+              <p class="text-secondary">Large-scale healthcare systems face intricate inpatient DRG coding, complex charge master maintenance, and multi-facility compliance requirements. CuraSync provides scalable billing support and rigorous audit defense.</p>
+            </div>
+          </div>
+          <div class="card card-hover">
+            <div class="card-body">
+              <span class="badge badge-teal">CLINICS & AMBULATORY CARE</span>
+              <h3>High-Velocity Outpatient Workflows</h3>
+              <p class="text-secondary">Ambulatory care centers require rapid patient check-in, real-time eligibility verification, and low days-in-AR. We streamline front-end intake to keep patient flow and reimbursement moving smoothly.</p>
+            </div>
+          </div>
+          <div class="card card-hover">
+            <div class="card-body">
+              <span class="badge badge-emerald">PHYSICIAN PRACTICES</span>
+              <h3>Specialty-Specific Revenue Care</h3>
+              <p class="text-secondary">From primary care to surgical subspecialties, physician practices benefit from meticulous CPT coding, provider credentialing oversight, and empathetic patient statement management.</p>
+            </div>
+          </div>
+          <div class="card card-hover">
+            <div class="card-body">
+              <span class="badge badge-amber">DIAGNOSTIC & IMAGING CENTERS</span>
+              <h3>Modality & Prior Auth Management</h3>
+              <p class="text-secondary">Diagnostic facilities depend on flawless prior authorizations and high-volume electronic claim scrubbing to prevent costly recurring rejections for high-cost imaging modalities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MID-PAGE CTA BANNER
+         ========================================================================== -->
+    <section class="section bg-navy" style="padding: 3rem 0;">
+      <div class="container text-center text-white">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">Your operation is specific. Your support should be.</h2>
+        <a href="contact.html" class="btn btn-primary btn-lg">Talk with CuraSync →</a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HEALTHCARE SERVICE LINES SECTION WITH SEARCH & FILTER
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-teal">HEALTHCARE SERVICE LINES</span>
+          <h2>Healthcare Services We Support</h2>
+          <p class="section-sub">Explore our specialized domain expertise across 11 key clinical and care delivery lines.</p>
+        </div>
+
+        <!-- Search and Filter Bar -->
+        <div class="filter-controls-container" style="margin: 2.5rem 0; display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+          <div class="search-input-wrapper" style="width: 100%; max-width: 500px;">
+            <input type="text" id="serviceSearchInput" class="form-control" placeholder="Search service lines (e.g. palliative, dementia, hospice)...">
+          </div>
+          
+          <div class="category-filter-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+            <button class="btn btn-sm btn-secondary active" data-category-filter="all">All Service Lines</button>
+            <button class="btn btn-sm btn-secondary" data-category-filter="primary-care">Primary Care</button>
+            <button class="btn btn-sm btn-secondary" data-category-filter="specialized">Specialized Programs</button>
+            <button class="btn btn-sm btn-secondary" data-category-filter="home-hospice">Home & Hospice</button>
+          </div>
+        </div>
+
+        <!-- Service Lines Cards Grid (11 Items) -->
+        <div class="grid-3-col" id="serviceLinesContainer" style="margin-top: 2rem;">
+
+          <div class="card service-line-card" data-category="primary-care">
+            <div class="card-body">
+              <span class="service-badge">01 • PRIMARY CARE</span>
+              <h3>Health & Wellness Visits</h3>
+              <p class="text-secondary">Routine physicals, preventive screenings, and annual wellness documentation coding and billing.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="home-hospice">
+            <div class="card-body">
+              <span class="service-badge">02 • HOME & HOSPICE</span>
+              <h3>In-Home Primary Care</h3>
+              <p class="text-secondary">House call billing workflows, home visit modifiers, and travel/encounter documentation support.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="primary-care">
+            <div class="card-body">
+              <span class="service-badge">03 • PRIMARY CARE</span>
+              <h3>Visiting Practitioners</h3>
+              <p class="text-secondary">Multi-provider coordination, credentialing alignment, and coordinated institutional billing.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="home-hospice">
+            <div class="card-body">
+              <span class="service-badge">04 • HOME & HOSPICE</span>
+              <h3>Community-Based Palliative Care</h3>
+              <p class="text-secondary">Specialized concurrent care billing, symptom management coding, and multi-payer coordination.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="specialized">
+            <div class="card-body">
+              <span class="service-badge">05 • SPECIALIZED</span>
+              <h3>Memory Care Program</h3>
+              <p class="text-secondary">Cognitive assessment billing, chronic care management (CCM) tracking, and specialist referrals.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="specialized">
+            <div class="card-body">
+              <span class="service-badge">06 • SPECIALIZED</span>
+              <h3>GUIDE - Medicare Dementia Program</h3>
+              <p class="text-secondary">Guiding an Improved Dementia Experience model alignment, care coordination billing, and compliance.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="home-hospice">
+            <div class="card-body">
+              <span class="service-badge">07 • HOME & HOSPICE</span>
+              <h3>Nursing Services</h3>
+              <p class="text-secondary">Skilled nursing visit claims, OASIS documentation review, and home health agency (HHA) billing.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="home-hospice">
+            <div class="card-body">
+              <span class="service-badge">08 • HOME & HOSPICE</span>
+              <h3>Home Health Services</h3>
+              <p class="text-secondary">PDGM (Patient-Driven Groupings Model) classification, episode management, and RAP/Final claims.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="home-hospice">
+            <div class="card-body">
+              <span class="service-badge">09 • HOME & HOSPICE</span>
+              <h3>Hospice Services</h3>
+              <p class="text-secondary">Routine home care, continuous care, inpatient respite billing, and Medicare/Medicaid coordination.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="primary-care">
+            <div class="card-body">
+              <span class="service-badge">10 • PRIMARY CARE</span>
+              <h3>Provider Services</h3>
+              <p class="text-secondary">Physician and mid-level practitioner billing, encounter review, and credentialing maintenance.</p>
+            </div>
+          </div>
+
+          <div class="card service-line-card" data-category="home-hospice">
+            <div class="card-body">
+              <span class="service-badge">11 • HOME & HOSPICE</span>
+              <h3>Comfort Care Services</h3>
+              <p class="text-secondary">Supportive care documentation, symptom relief billing, and compassionate patient billing support.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       CORPORATE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="160" style="filter: brightness(0) invert(1);">
+        <p class="footer-tagline">SMARTER RCM. HEALTHIER REVENUE.</p>
+        <p class="text-light text-sm" style="margin-top: 1rem;">Bringing clarity and dependability to healthcare revenue operations without losing sight of patient care.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="health-check.html">RCM Assessment</a></li>
+          <li><a href="case-studies.html">Case studies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>BLOG & RESOURCES</h4>
+        <ul>
+          <li><a href="blog.html">Blog & Resources</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-cta-col">
+        <h4>START A CONVERSATION</h4>
+        <p class="text-light text-sm">Talk with our team about your revenue operations.</p>
+        <a href="contact.html" class="footer-action-link">Request a conversation →</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© CuraSync. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

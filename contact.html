@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | CuraSync Revenue Operations</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="CuraSync Homepage">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="180">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="health-check.html" class="nav-link">RCM Assessment</a>
+        <a href="case-studies.html" class="nav-link">Case studies</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA & Hamburger -->
+      <div class="header-actions">
+        <a href="health-check.html" class="btn btn-primary btn-sm">Get Your RCM Health Check →</a>
+        <button class="mobile-nav-toggle" id="openDrawerBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="assets/images/logo.svg" alt="CuraSync" width="150">
+      <button class="modal-close" id="closeDrawerBtn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-nav" aria-label="Mobile Navigation Links">
+        <a href="services.html" class="drawer-link">Services</a>
+        <a href="industries.html" class="drawer-link">Industries</a>
+        <a href="about.html" class="drawer-link">About</a>
+        <a href="health-check.html" class="drawer-link">RCM Revenue Health Check</a>
+        <a href="case-studies.html" class="drawer-link">Case studies</a>
+        <a href="blog.html" class="drawer-link">Blog & Resources</a>
+        <a href="testimonials.html" class="drawer-link">Testimonials</a>
+        <a href="careers.html" class="drawer-link">Careers</a>
+        <a href="contact.html" class="drawer-link active">Contact</a>
+      </nav>
+      <div class="drawer-footer-cta">
+        <a href="health-check.html" class="btn btn-primary btn-block">Get Your RCM Health Check →</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         PAGE HERO
+         ========================================================================== -->
+    <section class="page-hero bg-subtle">
+      <div class="container text-center" style="max-width: 800px;">
+        <span class="badge badge-teal">CONTACT</span>
+        <h1>A focused conversation is a good place to start.</h1>
+        <p class="page-hero-sub">Tell us a little about your organization and what you're working through. We'll follow up with questions that are relevant to your operation.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DIRECT CONTACT CARDS & QUICK NOTE SECTION
+         ========================================================================== -->
+    <section class="section">
+      <div class="container" style="max-width: 1000px;">
+
+        <!-- Direct Contact Cards Grid -->
+        <div class="contact-cards-grid">
+
+          <!-- Email Card -->
+          <div class="contact-direct-card">
+            <span class="contact-card-eyebrow">DIRECT EMAIL</span>
+            <h3 class="contact-card-title">Inquiries &amp; Advisory</h3>
+            <p class="contact-card-desc">Reach our specialized revenue cycle management team for billing audits, clearinghouse questions, or operational assessments.</p>
+            <div class="contact-card-value">inquiries@curasync.com</div>
+            <a id="contactDirectEmailBtn" href="mailto:inquiries@curasync.com?subject=Revenue%20Operations%20Inquiry%20-%20CuraSync" class="btn btn-primary btn-block">Email Our Team ✉</a>
+            <div class="contact-card-meta">Typical response: under 4 business hours</div>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="contact-direct-card">
+            <span class="contact-card-eyebrow">DIRECT PHONE</span>
+            <h3 class="contact-card-title">Dedicated Revenue Advisory</h3>
+            <p class="contact-card-desc">Speak directly with a senior billing and operations advisor to discuss immediate practice needs.</p>
+            <div class="contact-card-value">+1 (800) 555-CURA</div>
+            <a id="contactDirectPhoneBtn" href="tel:+18005552872" class="btn btn-outline btn-block">Call Directly 📞</a>
+            <div class="contact-card-meta">Toll-free: +1 800-555-2872</div>
+          </div>
+
+          <!-- Operational Hours & Guarantee Card -->
+          <div class="contact-direct-card">
+            <span class="contact-card-eyebrow">HOURS &amp; COMMITMENT</span>
+            <h3 class="contact-card-title">Operational Hours</h3>
+            <p class="contact-card-desc">Dedicated revenue advisory coverage with rapid escalation protocols.</p>
+            <ul class="contact-hours-list">
+              <li><span>Mon–Fri:</span> <strong>8:00 AM – 6:00 PM EST</strong></li>
+              <li><span>Weekend:</span> <strong>On-call urgent support</strong></li>
+              <li><span>Turnaround:</span> <strong>Dedicated response within 1 business day</strong></li>
+            </ul>
+            <div style="text-align: center; margin-top: auto;">
+              <span class="badge badge-teal">Response SLA: &lt;24h Guaranteed</span>
+            </div>
+            <div class="contact-card-meta">Guaranteed operational advisory turnaround</div>
+          </div>
+
+        </div>
+
+        <!-- Zero-Loss Pipeline Info Badge -->
+        <div class="contact-pipeline-badge" style="margin-top: 3rem; margin-bottom: 1.5rem; text-align: center;">
+          <span class="badge badge-teal">Zero-Loss Direct Routing</span>
+          <span class="text-xs text-muted" style="margin-left: 0.5rem;">All inquiries are persisted locally in the client buffer with reference ID tracking</span>
+        </div>
+
+        <!-- Interactive Confirmation Banner (Populated by JS on submission) -->
+        <div id="contactSuccessAlert" class="alert alert-success" style="display: none; margin-bottom: 2rem;">
+          <!-- Populated dynamically with full receipt and actions by JS -->
+        </div>
+
+        <!-- Lightweight Quick Note Card -->
+        <div class="card shadow-md contact-quick-note-card" id="contactCard">
+          <div class="card-body" style="padding: 2.5rem;">
+            <div class="text-center" style="margin-bottom: 1.75rem;">
+              <span class="contact-card-eyebrow">SEND A QUICK NOTE</span>
+              <h2 style="font-size: 1.5rem; color: var(--color-navy); margin-top: 0.25rem; margin-bottom: 0.5rem;">Send a Note Directly to Our Desk</h2>
+              <p class="text-muted text-sm" style="margin: 0;">Have a quick question about claim scrubbing, credentialing, or denial management? Drop us a brief message below.</p>
+            </div>
+
+            <form id="contactForm" action="" method="POST">
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label for="contactName">Your Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="Dr. Alex Morgan" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label for="contactEmail">Work Email *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="amorgan@healthpartners.org" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.75rem;">
+                <label for="contactNotes">Your Message *</label>
+                <textarea id="contactNotes" class="form-control" rows="4" placeholder="Briefly describe your billing volume, current clearinghouse, or operational questions..." required></textarea>
+              </div>
+
+              <button type="submit" id="contactSubmitBtn" class="btn btn-primary btn-block btn-lg">Send Message →</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       CORPORATE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="160" style="filter: brightness(0) invert(1);">
+        <p class="footer-tagline">SMARTER RCM. HEALTHIER REVENUE.</p>
+        <p class="text-light text-sm" style="margin-top: 1rem;">Bringing clarity and dependability to healthcare revenue operations without losing sight of patient care.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="health-check.html">RCM Assessment</a></li>
+          <li><a href="case-studies.html">Case studies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>BLOG & RESOURCES</h4>
+        <ul>
+          <li><a href="blog.html">Blog & Resources</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-cta-col">
+        <h4>START A CONVERSATION</h4>
+        <p class="text-light text-sm">Talk with our team about your revenue operations.</p>
+        <a href="contact.html" class="footer-action-link">Request a conversation →</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© CuraSync. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

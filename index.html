@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuraSync | Smarter RCM. Healthier Revenue.</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="CuraSync Homepage">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="180">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="health-check.html" class="nav-link">RCM Assessment</a>
+        <a href="case-studies.html" class="nav-link">Case studies</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA & Hamburger -->
+      <div class="header-actions">
+        <a href="health-check.html" class="btn btn-primary btn-sm">Get Your RCM Health Check →</a>
+        <button class="mobile-nav-toggle" id="openDrawerBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="assets/images/logo.svg" alt="CuraSync" width="150">
+      <button class="modal-close" id="closeDrawerBtn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-nav" aria-label="Mobile Navigation Links">
+        <a href="services.html" class="drawer-link">Services</a>
+        <a href="industries.html" class="drawer-link">Industries</a>
+        <a href="about.html" class="drawer-link">About</a>
+        <a href="health-check.html" class="drawer-link">RCM Revenue Health Check</a>
+        <a href="case-studies.html" class="drawer-link">Case studies</a>
+        <a href="blog.html" class="drawer-link">Blog & Resources</a>
+        <a href="testimonials.html" class="drawer-link">Testimonials</a>
+        <a href="careers.html" class="drawer-link">Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+      <div class="drawer-footer-cta">
+        <a href="health-check.html" class="btn btn-primary btn-block">Get Your RCM Health Check →</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section bg-telemetry-grid">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="eyebrow-badge">
+            <span class="pulse-dot"></span>
+            CURASYNC • SMARTER RCM. HEALTHIER REVENUE.
+          </div>
+          <h1>Make revenue feel <span class="highlight-text">more dependable</span>.</h1>
+          <p class="hero-subtitle">We help hospitals, practices, and care organizations bring clarity to the work behind every claim—without losing sight of the people providing care.</p>
+          
+          <div class="hero-cta-group">
+            <a href="health-check.html" class="btn btn-primary">Get Your RCM Health Check →</a>
+            <a href="services.html" class="btn btn-secondary">Explore our services</a>
+          </div>
+
+          <div class="trust-badges">
+            <div class="trust-badge-item">✓ Compliance-minded workflows</div>
+            <div class="trust-badge-item">👥 People-first partnership</div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Operation Summary Card -->
+        <div class="hero-visual">
+          <div class="card shadow-xl border-teal">
+            <div class="card-header flex-between">
+              <div>
+                <span class="badge badge-teal">Live Operation View</span>
+                <h3 style="margin-top: 0.25rem; font-size: 1.15rem;">Revenue Health Monitor</h3>
+              </div>
+              <span class="text-success font-semibold">● Operational</span>
+            </div>
+            <div class="card-body">
+              <div class="metric-display-grid">
+                <div class="metric-card">
+                  <span class="metric-label">Clean Claim Rate</span>
+                  <span class="metric-value text-teal">96.8%</span>
+                  <span class="metric-trend text-success">+4.2% vs industry avg</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-label">Days in A/R</span>
+                  <span class="metric-value">38.4</span>
+                  <span class="metric-trend text-success">-6 days faster</span>
+                </div>
+              </div>
+              <div class="activity-stream">
+                <div class="activity-item">
+                  <span class="activity-dot bg-teal"></span>
+                  <div class="activity-text">
+                    <strong>Eligibility verified</strong>
+                    <span class="text-muted">Batch 482 · 142 encounters cleared</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-dot bg-emerald"></span>
+                  <div class="activity-text">
+                    <strong>Clean claim handoff</strong>
+                    <span class="text-muted">Payer gateway accepted batch #9021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXECUTIVE COMMAND CENTER & ROI YIELD CALCULATOR
+         ========================================================================== -->
+    <section class="section bg-telemetry-grid" id="roi-calculator-section">
+      <div class="container">
+        <div class="rcm-yield-calculator">
+          <div class="calculator-card">
+            
+            <div class="calculator-header">
+              <div>
+                <div class="calculator-badge">
+                  <span class="calculator-live-dot"></span>
+                  EXECUTIVE COMMAND CENTER
+                </div>
+                <h3 class="calculator-title">Healthcare Revenue Yield & Recovery Calculator</h3>
+                <p class="calculator-subtitle">Estimate annual revenue recovery and workflow acceleration based on your practice or hospital volume.</p>
+              </div>
+              <span class="badge badge-teal">Dynamic Real-Time Modeling</span>
+            </div>
+
+            <div class="calculator-grid">
+              
+              <!-- Left Column: Interactive Range Sliders -->
+              <div class="calculator-inputs">
+                
+                <!-- Slider 1: Monthly Collections -->
+                <div class="slider-group">
+                  <div class="slider-header">
+                    <label for="monthlyCollectionsRange" class="slider-label">
+                      <span>Monthly Collections Volume</span>
+                    </label>
+                    <span class="slider-value-badge" id="monthlyCollectionsDisplay">$1,500,000 / mo</span>
+                  </div>
+                  <input type="range" id="monthlyCollectionsRange" class="slider-range" min="200000" max="10000000" step="100000" value="1500000" aria-label="Monthly Collections Volume">
+                  <div class="slider-scale">
+                    <span class="slider-scale-tick">$200K</span>
+                    <span class="slider-scale-tick">$2.5M</span>
+                    <span class="slider-scale-tick">$5.0M</span>
+                    <span class="slider-scale-tick">$10M+</span>
+                  </div>
+                </div>
+
+                <!-- Slider 2: Current Initial Denial Rate -->
+                <div class="slider-group">
+                  <div class="slider-header">
+                    <label for="denialRateRange" class="slider-label">
+                      <span>Current Initial Denial Rate</span>
+                    </label>
+                    <span class="slider-value-badge" id="denialRateDisplay">11.5%</span>
+                  </div>
+                  <input type="range" id="denialRateRange" class="slider-range" min="4" max="25" step="0.5" value="11.5" aria-label="Current Initial Denial Rate">
+                  <div class="slider-scale">
+                    <span class="slider-scale-tick">4% (Top 5%)</span>
+                    <span class="slider-scale-tick">10% (Avg)</span>
+                    <span class="slider-scale-tick">18% (Vulnerable)</span>
+                    <span class="slider-scale-tick">25% (Critical)</span>
+                  </div>
+                </div>
+
+                <!-- Slider 3: Average Days in A/R -->
+                <div class="slider-group">
+                  <div class="slider-header">
+                    <label for="daysInArRange" class="slider-label">
+                      <span>Average Days in A/R</span>
+                    </label>
+                    <span class="slider-value-badge" id="daysInArDisplay">48 Days</span>
+                  </div>
+                  <input type="range" id="daysInArRange" class="slider-range" min="25" max="80" step="1" value="48" aria-label="Average Days in A/R">
+                  <div class="slider-scale">
+                    <span class="slider-scale-tick">25 Days (Benchmark)</span>
+                    <span class="slider-scale-tick">45 Days</span>
+                    <span class="slider-scale-tick">65 Days</span>
+                    <span class="slider-scale-tick">80 Days</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Column: Live Yield Display -->
+              <div class="calculator-results">
+                
+                <div class="yield-metric-card">
+                  <div class="yield-metric-header">
+                    <span class="yield-metric-label">Estimated Annual Recovered Yield</span>
+                    <span class="badge badge-emerald">ROI Opportunity</span>
+                  </div>
+                  <div class="yield-metric-value" id="recoveredYieldDisplay">$1,615,500</div>
+                  <span class="yield-metric-sub">Direct margin unlocked via automated scrubbing &amp; rapid appeal resolution.</span>
+                </div>
+
+                <div class="recovery-efficiency-meter">
+                  <div class="efficiency-header">
+                    <span class="efficiency-label">Projected Collection Efficiency</span>
+                    <span class="efficiency-percentage" id="efficiencyDisplay">98.2%</span>
+                  </div>
+                  <div class="efficiency-track">
+                    <div class="efficiency-fill" id="efficiencyFill" style="width: 98.2%;"></div>
+                  </div>
+                </div>
+
+                <div class="calculator-breakdown">
+                  <div class="breakdown-item">
+                    <span class="breakdown-label">Denial Recovery Unlocked:</span>
+                    <span class="breakdown-val" id="denialRecoveryVal">$1,345,500</span>
+                  </div>
+                  <div class="breakdown-item">
+                    <span class="breakdown-label">Cash Flow Velocity Lift:</span>
+                    <span class="breakdown-val" id="velocityLiftVal">-10 Days faster</span>
+                  </div>
+                  <div class="breakdown-item">
+                    <span class="breakdown-label">Pre-bill Rework Mitigated:</span>
+                    <span class="breakdown-val" id="reworkMitigatedVal">$269,100</span>
+                  </div>
+                </div>
+
+                <div class="calculator-cta-row">
+                  <a href="health-check.html" class="btn btn-primary btn-calc-cta">
+                    Run Comprehensive RCM Audit →
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE 5-STAGE REVENUE JOURNEY PIPELINE
+         ========================================================================== -->
+    <section class="section bg-obsidian-surface bg-telemetry-grid-dark" id="pipeline-section">
+      <div class="ambient-glow-cyan"></div>
+      <div class="ambient-glow-emerald"></div>
+
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="revenue-pipeline-viz">
+          <div class="pipeline-card">
+            
+            <div class="pipeline-header">
+              <div class="pipeline-eyebrow">
+                <span class="pulse-dot"></span>
+                CONNECTED OPERATIONAL INFRASTRUCTURE
+              </div>
+              <h2 class="pipeline-title text-white">The Zero-Loss Revenue Pipeline</h2>
+              <p class="pipeline-subtitle text-light">Every claim passes through five automated checkpoints monitored by dedicated specialists.</p>
+            </div>
+
+            <!-- 5 Interactive Stage Buttons with Connecting Pulses -->
+            <div class="pipeline-flow" id="pipelineFlowContainer">
+              
+              <!-- Stage 1 -->
+              <div class="pipeline-stage">
+                <button type="button" class="pipeline-stage-btn active" data-stage="1" aria-selected="true">
+                  <div class="pipeline-stage-node">
+                    <span class="stage-node-icon">🛡️</span>
+                    <span class="stage-node-pulse"></span>
+                  </div>
+                  <span class="stage-node-num">01 · INTAKE</span>
+                  <div class="stage-node-info">
+                    <strong class="stage-node-title">Eligibility</strong>
+                    <span class="stage-sla-badge">SLA &lt;15s</span>
+                    <span class="stage-metric">99.2% Clean</span>
+                  </div>
+                </button>
+              </div>
+
+              <div class="pipeline-connector">
+                <div class="pipeline-connector-line"></div>
+                <div class="pipeline-connector-pulse"></div>
+              </div>
+
+              <!-- Stage 2 -->
+              <div class="pipeline-stage">
+                <button type="button" class="pipeline-stage-btn" data-stage="2" aria-selected="false">
+                  <div class="pipeline-stage-node">
+                    <span class="stage-node-icon">⚕️</span>
+                    <span class="stage-node-pulse"></span>
+                  </div>
+                  <span class="stage-node-num">02 · CODING</span>
+                  <div class="stage-node-info">
+                    <strong class="stage-node-title">Scrubbing</strong>
+                    <span class="stage-sla-badge">SLA &lt;24h</span>
+                    <span class="stage-metric">98.7% CPT</span>
+                  </div>
+                </button>
+              </div>
+
+              <div class="pipeline-connector">
+                <div class="pipeline-connector-line"></div>
+                <div class="pipeline-connector-pulse"></div>
+              </div>
+
+              <!-- Stage 3 -->
+              <div class="pipeline-stage">
+                <button type="button" class="pipeline-stage-btn" data-stage="3" aria-selected="false">
+                  <div class="pipeline-stage-node">
+                    <span class="stage-node-icon">📤</span>
+                    <span class="stage-node-pulse"></span>
+                  </div>
+                  <span class="stage-node-num">03 · FILING</span>
+                  <div class="stage-node-info">
+                    <strong class="stage-node-title">Clean Handoff</strong>
+                    <span class="stage-sla-badge">SLA &lt;12h</span>
+                    <span class="stage-metric">98.4% Clean</span>
+                  </div>
+                </button>
+              </div>
+
+              <div class="pipeline-connector">
+                <div class="pipeline-connector-line"></div>
+                <div class="pipeline-connector-pulse"></div>
+              </div>
+
+              <!-- Stage 4 -->
+              <div class="pipeline-stage">
+                <button type="button" class="pipeline-stage-btn" data-stage="4" aria-selected="false">
+                  <div class="pipeline-stage-node">
+                    <span class="stage-node-icon">⚖️</span>
+                    <span class="stage-node-pulse"></span>
+                  </div>
+                  <span class="stage-node-num">04 · APPEALS</span>
+                  <div class="stage-node-info">
+                    <strong class="stage-node-title">Triage Swarms</strong>
+                    <span class="stage-sla-badge">SLA &lt;4h</span>
+                    <span class="stage-metric">82% Recovered</span>
+                  </div>
+                </button>
+              </div>
+
+              <div class="pipeline-connector">
+                <div class="pipeline-connector-line"></div>
+                <div class="pipeline-connector-pulse"></div>
+              </div>
+
+              <!-- Stage 5 -->
+              <div class="pipeline-stage">
+                <button type="button" class="pipeline-stage-btn" data-stage="5" aria-selected="false">
+                  <div class="pipeline-stage-node">
+                    <span class="stage-node-icon">💰</span>
+                    <span class="stage-node-pulse"></span>
+                  </div>
+                  <span class="stage-node-num">05 · POSTING</span>
+                  <div class="stage-node-info">
+                    <strong class="stage-node-title">Remittance</strong>
+                    <span class="stage-sla-badge">SLA &lt;24h</span>
+                    <span class="stage-metric">&lt;32 Days AR</span>
+                  </div>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Dynamic Detail Panel for Active Stage -->
+            <div class="pipeline-details-panel" id="pipelineDetailsPanel">
+              <div class="pipeline-detail-header">
+                <h4 class="pipeline-detail-title" id="pipelineDetailTitle">Stage 1 · Real-Time Pre-Service Eligibility &amp; Benefit Check</h4>
+                <p class="pipeline-detail-desc" id="pipelineDetailDesc">Automated EDI 270/271 queries verify active coverage, patient copays, coinsurance, and prior authorization requirements prior to the patient arriving in clinic.</p>
+              </div>
+
+              <div class="pipeline-callout-grid" id="pipelineCalloutGrid">
+                <div class="pipeline-callout-card">
+                  <span class="pipeline-callout-icon">⚡</span>
+                  <strong class="pipeline-callout-title">Sub-15s Latency</strong>
+                  <p class="pipeline-callout-text">Direct API connections with 900+ commercial payers and Medicare/Medicaid gateways.</p>
+                </div>
+                <div class="pipeline-callout-card">
+                  <span class="pipeline-callout-icon">🔒</span>
+                  <strong class="pipeline-callout-title">Zero Auth Drift</strong>
+                  <p class="pipeline-callout-text">AI monitors scheduling queues to ensure procedures have valid authorization numbers attached.</p>
+                </div>
+                <div class="pipeline-callout-card">
+                  <span class="pipeline-callout-icon">📈</span>
+                  <strong class="pipeline-callout-title">99.2% Clean Intake</strong>
+                  <p class="pipeline-callout-text">Stops front-end registration errors before claims are ever generated.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CARE SETTINGS SOCIAL PROOF STRIP
+         ========================================================================== -->
+    <section class="social-proof-strip">
+      <div class="container">
+        <p class="proof-label">Support shaped for the realities of your care setting.</p>
+        <div class="proof-chips">
+          <a href="industries.html" class="proof-chip">Hospitals</a>
+          <a href="industries.html" class="proof-chip">Clinics</a>
+          <a href="industries.html" class="proof-chip">Physician practices</a>
+          <a href="industries.html" class="proof-chip">Diagnostic centers</a>
+          <a href="industries.html" class="proof-chip">Telehealth</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OPERATIONS VISUALIZER SECTION
+         ========================================================================== -->
+    <section class="section bg-subtle">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-navy">REVENUE OPERATIONS</span>
+          <h2>A clearer view of the work</h2>
+          <p class="section-sub">Workflow view</p>
+        </div>
+
+        <div class="ops-visualizer-card">
+          <!-- Tab Buttons -->
+          <div class="ops-tabs" id="opsTabContainer">
+            <button class="ops-tab active" data-ops-tab="eligibility">
+              <span class="tab-num">01</span>
+              <div>
+                <strong>Eligibility</strong>
+                <span>Coverage checked before service</span>
+              </div>
+            </button>
+            <button class="ops-tab" data-ops-tab="claims">
+              <span class="tab-num">02</span>
+              <div>
+                <strong>Claims</strong>
+                <span>Clean handoff to payer</span>
+              </div>
+            </button>
+            <button class="ops-tab" data-ops-tab="followup">
+              <span class="tab-num">03</span>
+              <div>
+                <strong>Follow-up</strong>
+                <span>Exceptions routed to a person</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- Chart Area -->
+          <div class="ops-chart-area" id="opsChartArea">
+            <div class="chart-header-row">
+              <div class="ops-chart-title-group">
+                <h4 class="ops-telemetry-heading">Clinical Revenue Telemetry Equalizer</h4>
+                <p class="ops-telemetry-sub">Live multi-stage operational histogram across intake, filing &amp; resolution</p>
+              </div>
+              <div class="ops-telemetry-status">
+                <span class="telemetry-live-dot"></span>
+                <span class="badge badge-teal">Live Telemetry Active</span>
+              </div>
+            </div>
+
+            <!-- Floating Dark Navy Tooltip -->
+            <div class="ops-chart-tooltip" id="opsChartTooltip" role="tooltip" aria-hidden="true"></div>
+
+            <!-- Histogram Equalizer Container with Y-Axis and Grid -->
+            <div class="ops-histogram-card">
+              <!-- Y-Axis Markers -->
+              <div class="ops-y-axis" aria-hidden="true">
+                <span class="ops-y-tick">100%</span>
+                <span class="ops-y-tick">75%</span>
+                <span class="ops-y-tick">50%</span>
+                <span class="ops-y-tick">25%</span>
+                <span class="ops-y-tick">0%</span>
+              </div>
+
+              <!-- Plot Area with Horizontal Dashed Gridlines -->
+              <div class="ops-plot-wrapper">
+                <div class="ops-grid-lines" aria-hidden="true">
+                  <div class="ops-grid-line" style="bottom: 100%;"></div>
+                  <div class="ops-grid-line" style="bottom: 75%;"></div>
+                  <div class="ops-grid-line" style="bottom: 50%;"></div>
+                  <div class="ops-grid-line" style="bottom: 25%;"></div>
+                  <div class="ops-grid-line" style="bottom: 0%;"></div>
+                </div>
+
+                <!-- 9 Slim Pill Bars grouped into 3 Operational Stages -->
+                <div class="ops-stages-container">
+                  
+                  <!-- STAGE 1: INTAKE -->
+                  <div class="ops-stage-block active-stage" id="opsStageIntake" data-stage-index="0">
+                    <div class="ops-stage-header">
+                      <span class="ops-stage-badge">STAGE 1</span>
+                      <strong class="ops-stage-title">INTAKE</strong>
+                    </div>
+                    <div class="ops-bars-group">
+                      <!-- Bar 1: Batch Intake -->
+                      <div class="ops-bar-wrapper" data-metric="Batch Intake" data-stage="Stage 1: INTAKE" data-throughput="96.5% Ingestion Velocity" data-status="Real-time EDI ingestion · &lt;5m" data-value="96%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-cyan-teal" id="opsBarBatchIntake" style="height: 96%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">Batch</span>
+                      </div>
+                      <!-- Bar 2: Coverage Check -->
+                      <div class="ops-bar-wrapper" data-metric="Coverage Check" data-stage="Stage 1: INTAKE" data-throughput="98.2% Auto-Verified" data-status="Payer EDI 270/271 · &lt;15s" data-value="98%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-cyan-teal" id="opsBarCoverageCheck" style="height: 98%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">Coverage</span>
+                      </div>
+                      <!-- Bar 3: Prior Auth -->
+                      <div class="ops-bar-wrapper" data-metric="Prior Authorization" data-stage="Stage 1: INTAKE" data-throughput="94.6% Cleared" data-status="Pre-service clearance · &lt;24h" data-value="94%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-cyan-teal" id="opsBarPriorAuth" style="height: 94%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">Prior Auth</span>
+                      </div>
+                    </div>
+                    <div class="ops-stage-footer">
+                      <span class="ops-stage-stat">96.4% avg clean</span>
+                    </div>
+                  </div>
+
+                  <!-- STAGE 2: CLAIMS -->
+                  <div class="ops-stage-block" id="opsStageClaims" data-stage-index="1">
+                    <div class="ops-stage-header">
+                      <span class="ops-stage-badge">STAGE 2</span>
+                      <strong class="ops-stage-title">CLAIMS</strong>
+                    </div>
+                    <div class="ops-bars-group">
+                      <!-- Bar 4: Scrubbing -->
+                      <div class="ops-bar-wrapper" data-metric="Clinical Scrubbing" data-stage="Stage 2: CLAIMS" data-throughput="99.1% Rule Compliance" data-status="NCCI &amp; LCD/NCD verified" data-value="91%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-emerald-cyan" id="opsBarScrubbing" style="height: 91%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">Scrub</span>
+                      </div>
+                      <!-- Bar 5: Clean Filing -->
+                      <div class="ops-bar-wrapper" data-metric="Clean Filing" data-stage="Stage 2: CLAIMS" data-throughput="98.4% First-Pass Rate" data-status="Zero-defect gateway push" data-value="89%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-emerald-cyan" id="opsBarCleanFiling" style="height: 89%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">Clean File</span>
+                      </div>
+                      <!-- Bar 6: Gateway Payer Acceptance -->
+                      <div class="ops-bar-wrapper" data-metric="Gateway Payer Acceptance" data-stage="Stage 2: CLAIMS" data-throughput="97.8% Clearinghouse Ack" data-status="Instant 999/277CA response" data-value="88%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-emerald-cyan" id="opsBarGatewayPayer" style="height: 88%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">Gateway</span>
+                      </div>
+                    </div>
+                    <div class="ops-stage-footer">
+                      <span class="ops-stage-stat">98.4% first-pass</span>
+                    </div>
+                  </div>
+
+                  <!-- STAGE 3: RESOLUTION -->
+                  <div class="ops-stage-block" id="opsStageResolution" data-stage-index="2">
+                    <div class="ops-stage-header">
+                      <span class="ops-stage-badge">STAGE 3</span>
+                      <strong class="ops-stage-title">RESOLUTION</strong>
+                    </div>
+                    <div class="ops-bars-group">
+                      <!-- Bar 7: Fast Remittance -->
+                      <div class="ops-bar-wrapper" data-metric="Fast Remittance" data-stage="Stage 3: RESOLUTION" data-throughput="98.5% Auto-Matched" data-status="835 ERA auto-reconciliation" data-value="85%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-navy-cyan" id="opsBarFastRemittance" style="height: 85%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">Remit</span>
+                      </div>
+                      <!-- Bar 8: Exception Route -->
+                      <div class="ops-bar-wrapper" data-metric="Exception Routing" data-stage="Stage 3: RESOLUTION" data-throughput="99.2% Specialist Routed" data-status="Human-in-the-loop triage · &lt;4h" data-value="90%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-navy-cyan" id="opsBarExceptionRoute" style="height: 90%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">Exception</span>
+                      </div>
+                      <!-- Bar 9: A/R Posting -->
+                      <div class="ops-bar-wrapper" data-metric="A/R Posting &amp; Reconciliation" data-stage="Stage 3: RESOLUTION" data-throughput="97.6% Posted in 24h" data-status="Days in A/R &lt; 32 · Reconciled" data-value="92%">
+                        <div class="ops-bar-track">
+                          <div class="ops-bar-fill grad-navy-cyan" id="opsBarArPosting" style="height: 92%;"></div>
+                        </div>
+                        <span class="ops-bar-micro-label">A/R Post</span>
+                      </div>
+                    </div>
+                    <div class="ops-stage-footer">
+                      <span class="ops-stage-stat">&lt;24h turnaround</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Legacy IDs container to preserve 100% backward compatibility -->
+            <div style="display:none;" aria-hidden="true">
+              <div id="opsBarIntake"></div>
+              <div id="opsBarClaims"></div>
+              <div id="opsBarResolution"></div>
+            </div>
+
+            <div class="ops-callout-card">
+              <h5 id="opsCalloutTitle">Coverage verified before service</h5>
+              <p id="opsCalloutText">Patient eligibility, benefit limits, and prior authorization requirements are checked prior to care delivery, preventing downstream rejections.</p>
+            </div>
+          </div>
+
+          <div class="ops-footer-tag">
+            <span>People + process + visibility</span>
+            <span>•</span>
+            <span>Built around your operation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header flex-between">
+          <div>
+            <span class="badge badge-teal">CORE SERVICES</span>
+            <h2>Revenue cycle support with the whole operation in view</h2>
+          </div>
+          <a href="services.html" class="link-arrow">View all revenue cycle services →</a>
+        </div>
+
+        <div class="grid-2-col" style="margin-top: 2rem;">
+          <div class="card service-card-elevated card-glow-border">
+            <div class="card-body">
+              <span class="service-badge">01 • END-TO-END</span>
+              <h3>Revenue cycle management</h3>
+              <p class="text-secondary">Comprehensive oversight from patient scheduling and registration through billing, collection, and ledger reconciliation.</p>
+              <a href="services.html" class="link-arrow" style="margin-top: 1rem; display: inline-block;">Explore service →</a>
+            </div>
+          </div>
+          <div class="card service-card-elevated card-glow-border">
+            <div class="card-body">
+              <span class="service-badge">02 • BILLING</span>
+              <h3>Medical billing</h3>
+              <p class="text-secondary">Rigorous electronic claim submission, clearinghouse tracking, and secondary insurance coordination designed for maximum collection speed.</p>
+              <a href="services.html" class="link-arrow" style="margin-top: 1rem; display: inline-block;">Explore service →</a>
+            </div>
+          </div>
+          <div class="card service-card-elevated card-glow-border">
+            <div class="card-body">
+              <span class="service-badge">03 • CODING</span>
+              <h3>Medical coding</h3>
+              <p class="text-secondary">Certified professional coders ensuring accurate ICD-10, CPT, and HCPCS coding that aligns with clinical documentation and compliance.</p>
+              <a href="services.html" class="link-arrow" style="margin-top: 1rem; display: inline-block;">Explore service →</a>
+            </div>
+          </div>
+          <div class="card service-card-elevated card-glow-border">
+            <div class="card-body">
+              <span class="service-badge">04 • ELIGIBILITY</span>
+              <h3>Eligibility verification</h3>
+              <p class="text-secondary">Proactive verification of active insurance coverage, copays, deductibles, and prior authorizations before patient encounters occur.</p>
+              <a href="services.html" class="link-arrow" style="margin-top: 1rem; display: inline-block;">Explore service →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PARTNER METHODOLOGY SECTION
+         ========================================================================== -->
+    <section class="section bg-subtle">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-navy">OUR APPROACH</span>
+          <h2>A practical partner, not another layer of complexity</h2>
+          <p class="section-sub">Structured methodology designed to integrate seamlessly with your existing team.</p>
+        </div>
+
+        <div class="grid-3-col" style="margin-top: 2.5rem;">
+          <div class="card method-card">
+            <div class="card-body">
+              <span class="method-num">01</span>
+              <h3>Listen and map</h3>
+              <p class="text-secondary">We begin by understanding your specific service lines, workflow bottlenecks, and payer mix before proposing any operational adjustments.</p>
+            </div>
+          </div>
+          <div class="card method-card">
+            <div class="card-body">
+              <span class="method-num">02</span>
+              <h3>Align the work</h3>
+              <p class="text-secondary">We integrate our billing specialists and verification workflows with your EHR and practice management systems for smooth day-to-day execution.</p>
+            </div>
+          </div>
+          <div class="card method-card">
+            <div class="card-body">
+              <span class="method-num">03</span>
+              <h3>Keep improving</h3>
+              <p class="text-secondary">Through transparent reporting and proactive denial root-cause analysis, we continuously refine performance to stabilize your revenue.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 2.5rem;">
+          <a href="about.html" class="btn btn-secondary">Learn more about our philosophy →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BUILT FOR YOUR SETTING SECTION
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-teal">CARE SETTINGS</span>
+          <h2>Care models differ. Revenue operations should, too.</h2>
+          <p class="section-sub">Tailored operational support designed around the unique financial rhythms of your care environment.</p>
+        </div>
+
+        <div class="grid-3-col" style="margin-top: 2.5rem;">
+          <a href="industries.html" class="care-card-elevated" aria-label="Explore Hospitals and Health Systems Care Setting">
+            <div class="setting-icon-box setting-icon-box-hospital">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18"></path>
+                <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path>
+                <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+                <line x1="10" y1="9" x2="14" y2="9"></line>
+                <line x1="12" y1="7" x2="12" y2="11"></line>
+              </svg>
+            </div>
+            <span class="card-badge-pill card-badge-pill-cyan">ACUTE &amp; INPATIENT</span>
+            <h3>Hospitals and health systems</h3>
+            <p class="text-secondary">Multi-facility billing, complex inpatient/outpatient DRG coding, and rigorous compliance audit defense.</p>
+            <span class="link-arrow" style="margin-top: auto; padding-top: 1rem;">Explore setting →</span>
+          </a>
+
+          <a href="industries.html" class="care-card-elevated" aria-label="Explore Clinics and Ambulatory Care Setting">
+            <div class="setting-icon-box setting-icon-box-clinic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <span class="card-badge-pill card-badge-pill-emerald">AMBULATORY &amp; CLINIC</span>
+            <h3>Clinics and ambulatory care</h3>
+            <p class="text-secondary">Fast-paced scheduling verification, rapid claim turnaround, and patient billing support.</p>
+            <span class="link-arrow" style="margin-top: auto; padding-top: 1rem;">Explore setting →</span>
+          </a>
+
+          <a href="industries.html" class="care-card-elevated" aria-label="Explore Physician Practices Care Setting">
+            <div class="setting-icon-box setting-icon-box-practice">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <span class="card-badge-pill card-badge-pill-cyan">SPECIALTY PRACTICE</span>
+            <h3>Physician practices</h3>
+            <p class="text-secondary">Specialty-specific coding expertise and proactive Accounts Receivable management.</p>
+            <span class="link-arrow" style="margin-top: auto; padding-top: 1rem;">Explore setting →</span>
+          </a>
+
+          <a href="industries.html" class="care-card-elevated" aria-label="Explore Diagnostic and Imaging Centers Care Setting">
+            <div class="setting-icon-box setting-icon-box-diagnostic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+              </svg>
+            </div>
+            <span class="card-badge-pill card-badge-pill-emerald">DIAGNOSTIC &amp; IMAGING</span>
+            <h3>Diagnostic and imaging centers</h3>
+            <p class="text-secondary">High-volume claim processing, prior authorization tracking, and modality-specific coding.</p>
+            <span class="link-arrow" style="margin-top: auto; padding-top: 1rem;">Explore setting →</span>
+          </a>
+
+          <a href="industries.html" class="care-card-elevated" aria-label="Explore Telehealth Organizations Care Setting">
+            <div class="setting-icon-box setting-icon-box-telehealth">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <span class="card-badge-pill card-badge-pill-cyan">VIRTUAL CARE</span>
+            <h3>Telehealth organizations</h3>
+            <p class="text-secondary">Multi-state credentialing, virtual visit coding, and evolving payer policy navigation.</p>
+            <span class="link-arrow" style="margin-top: auto; padding-top: 1rem;">Explore setting →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CTA BANNER
+         ========================================================================== -->
+    <section class="cta-banner-section bg-navy">
+      <div class="container text-center text-white">
+        <h2>Bring us the question your team is working through.</h2>
+        <p class="cta-sub">We'll have a focused conversation about your operation, not a one-size-fits-all pitch.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Start a conversation →</a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BLOG PREVIEW CARD
+         ========================================================================== -->
+    <section class="section bg-subtle">
+      <div class="container">
+        <div class="card shadow-md" style="max-width: 800px; margin: 0 auto; background: var(--bg-card);">
+          <div class="card-body" style="padding: 2.5rem;">
+            <span class="badge badge-teal">INSIGHTS & RESOURCES</span>
+            <h3 style="margin-top: 0.75rem; font-size: 1.5rem;">Ideas for steadier operations</h3>
+            <p class="text-secondary" style="margin: 1rem 0 1.5rem 0;">Explore our latest perspectives on reducing denials, streamlining eligibility verification, and supporting clinical care teams through better revenue workflows.</p>
+            <a href="blog.html" class="btn btn-secondary">Explore blog & resources →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       CORPORATE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="160" style="filter: brightness(0) invert(1);">
+        <p class="footer-tagline">SMARTER RCM. HEALTHIER REVENUE.</p>
+        <p class="text-light text-sm" style="margin-top: 1rem;">Bringing clarity and dependability to healthcare revenue operations without losing sight of patient care.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="health-check.html">RCM Assessment</a></li>
+          <li><a href="case-studies.html">Case studies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>BLOG & RESOURCES</h4>
+        <ul>
+          <li><a href="blog.html">Blog & Resources</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-cta-col">
+        <h4>START A CONVERSATION</h4>
+        <p class="text-light text-sm">Talk with our team about your revenue operations.</p>
+        <a href="contact.html" class="footer-action-link">Request a conversation →</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© CuraSync. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

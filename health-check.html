@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCM Revenue Health Check | CuraSync Revenue Intelligence</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="CuraSync Homepage">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="180">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="health-check.html" class="nav-link active">RCM Assessment</a>
+        <a href="case-studies.html" class="nav-link">Case studies</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA & Hamburger -->
+      <div class="header-actions">
+        <a href="health-check.html" class="btn btn-primary btn-sm">Get Your RCM Health Check →</a>
+        <button class="mobile-nav-toggle" id="openDrawerBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="assets/images/logo.svg" alt="CuraSync" width="150">
+      <button class="modal-close" id="closeDrawerBtn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-nav" aria-label="Mobile Navigation Links">
+        <a href="services.html" class="drawer-link">Services</a>
+        <a href="industries.html" class="drawer-link">Industries</a>
+        <a href="about.html" class="drawer-link">About</a>
+        <a href="health-check.html" class="drawer-link active">RCM Revenue Health Check</a>
+        <a href="case-studies.html" class="drawer-link">Case studies</a>
+        <a href="blog.html" class="drawer-link">Blog & Resources</a>
+        <a href="testimonials.html" class="drawer-link">Testimonials</a>
+        <a href="careers.html" class="drawer-link">Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+      <div class="drawer-footer-cta">
+        <a href="health-check.html" class="btn btn-primary btn-block">Get Your RCM Health Check →</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         PAGE HERO
+         ========================================================================== -->
+    <section class="page-hero bg-navy text-white">
+      <div class="container text-center" style="max-width: 800px;">
+        <span class="badge badge-teal" style="background: rgba(8, 145, 178, 0.25); color: #38BDF8; border-color: rgba(56, 189, 248, 0.3);">CURASYNC REVENUE INTELLIGENCE</span>
+        <h1 style="color: #FFFFFF;">RCM Revenue Health Check</h1>
+        <p class="page-hero-sub" style="color: #CBD5E1;">Analyze Your Revenue Cycle. Identify Leakage. Improve Performance. A structured operational review of billing, collections, A/R, claims, and denial trends—based only on the information you provide.</p>
+        
+        <div class="trust-badges" style="justify-content: center; margin-top: 1.5rem; border-top-color: rgba(255, 255, 255, 0.15);">
+          <div class="trust-badge-item" style="color: #CBD5E1;">🔒 Private submission</div>
+          <div class="trust-badge-item" style="color: #CBD5E1;">📊 Transparent calculations</div>
+          <div class="trust-badge-item" style="color: #CBD5E1;">👤 Admin-only access</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WIZARD CONTAINER SECTION
+         ========================================================================== -->
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        
+        <!-- Stepper Header -->
+        <div class="wizard-stepper-header card shadow-sm" style="margin-bottom: 2rem; background: var(--bg-card); padding: 1.5rem 2rem;">
+          <div class="flex-between" style="margin-bottom: 1rem;">
+            <h3 id="stepTitleText" style="font-size: 1.1rem; color: var(--color-navy);">Step 1 of 4 · Organization Details</h3>
+            <span id="metricCounterText" class="badge badge-teal">0 of 17 metrics entered</span>
+          </div>
+          
+          <div class="progress" style="height: 8px; background: var(--bg-subtle); border-radius: var(--radius-full); overflow: hidden; margin-bottom: 1rem;">
+            <div class="progress-bar bg-teal" id="wizardProgressBar" style="width: 25%; height: 100%; transition: width 0.3s ease;"></div>
+          </div>
+
+          <div class="step-indicators-row" style="display: flex; justify-content: space-between; gap: 0.5rem;">
+            <div class="step-indicator active" id="stepIndicator1">
+              <div class="step-node">1</div>
+              <span class="step-label">Org Details</span>
+            </div>
+            <div class="step-indicator" id="stepIndicator2">
+              <div class="step-node">2</div>
+              <span class="step-label">Billing & Denials</span>
+            </div>
+            <div class="step-indicator" id="stepIndicator3">
+              <div class="step-node">3</div>
+              <span class="step-label">A/R & Collections</span>
+            </div>
+            <div class="step-indicator" id="stepIndicator4">
+              <div class="step-node">4</div>
+              <span class="step-label">Intelligence Report</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wizard Form -->
+        <form id="healthCheckForm">
+          
+          <!-- STEP 1: ORGANIZATION DETAILS -->
+          <div class="card shadow-md" id="wizardStep1" style="background: var(--bg-card);">
+            <div class="card-body" style="padding: 2.5rem;">
+              <h3 style="margin-bottom: 1.5rem; font-size: 1.35rem; color: var(--color-navy);">Tell us about your organization</h3>
+              
+              <div class="grid-2-col" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label for="orgName">Organization Name *</label>
+                  <input type="text" id="orgName" class="form-control" placeholder="e.g. Metro Health System" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactName">Your Name *</label>
+                  <input type="text" id="contactName" class="form-control" placeholder="e.g. Dr. Sarah Jenkins" required>
+                </div>
+                <div class="form-group">
+                  <label for="workEmail">Work Email *</label>
+                  <input type="email" id="workEmail" class="form-control" placeholder="sjenkins@metrohealth.org" required>
+                </div>
+                <div class="form-group">
+                  <label for="orgPhone">Phone Number</label>
+                  <input type="tel" id="orgPhone" class="form-control" placeholder="(555) 019-2834">
+                </div>
+                <div class="form-group">
+                  <label for="orgType">Care Setting / Organization Type</label>
+                  <select id="orgType" class="form-control">
+                    <option value="hospital">Hospital or Health System</option>
+                    <option value="clinic">Clinic or Ambulatory Care Center</option>
+                    <option value="practice">Physician Practice</option>
+                    <option value="diagnostic">Diagnostic & Imaging Center</option>
+                    <option value="telehealth">Telehealth Organization</option>
+                    <option value="home-hospice">Home Health & Hospice</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="providerCount">Number of Providers</label>
+                  <select id="providerCount" class="form-control">
+                    <option value="1-5">1 - 5 providers</option>
+                    <option value="6-20">6 - 20 providers</option>
+                    <option value="21-50">21 - 50 providers</option>
+                    <option value="51-200">51 - 200 providers</option>
+                    <option value="200+">200+ providers</option>
+                  </select>
+                </div>
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label for="specialties">Primary Specialties</label>
+                  <input type="text" id="specialties" class="form-control" placeholder="e.g. Primary Care, Cardiology, Palliative Care">
+                </div>
+                <div class="form-group">
+                  <label for="reportingPeriod">Reporting Period</label>
+                  <select id="reportingPeriod" class="form-control">
+                    <option value="q3-2026">Q3 2026 (Latest Quarter)</option>
+                    <option value="q2-2026">Q2 2026</option>
+                    <option value="trailing-12m">Trailing 12 Months</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="quarterlyBilling">Approximate Quarterly Billing Volume ($)</label>
+                  <input type="number" id="quarterlyBilling" class="form-control" placeholder="2500000" value="2500000">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: BILLING & DENIALS -->
+          <div class="card shadow-md" id="wizardStep2" style="display: none; background: var(--bg-card);">
+            <div class="card-body" style="padding: 2.5rem;">
+              <h3 style="margin-bottom: 1.5rem; font-size: 1.35rem; color: var(--color-navy);">Billing Performance & Denials</h3>
+              <p class="text-secondary" style="margin-bottom: 1.5rem;">Enter your current billing performance metrics. Estimated benchmarks will be used if exact figures are unknown.</p>
+
+              <div class="grid-2-col" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label for="cleanClaimRate">Clean Claim Rate (%)</label>
+                  <input type="number" id="cleanClaimRate" class="form-control" placeholder="92" min="50" max="100" value="88">
+                  <small class="text-muted">Industry benchmark: ≥ 95%</small>
+                </div>
+                <div class="form-group">
+                  <label for="initialDenialRate">Initial Denial Rate (%)</label>
+                  <input type="number" id="initialDenialRate" class="form-control" placeholder="10" min="0" max="50" value="12">
+                  <small class="text-muted">Industry benchmark: &le; 6%</small>
+                </div>
+                <div class="form-group">
+                  <label for="avgDaysToSubmit">Average Days to Submit Claims</label>
+                  <input type="number" id="avgDaysToSubmit" class="form-control" placeholder="4" value="6">
+                </div>
+                <div class="form-group">
+                  <label for="monthlyClaimVolume">Monthly Claim Volume</label>
+                  <input type="number" id="monthlyClaimVolume" class="form-control" placeholder="3500" value="4200">
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-top: 1.5rem;">
+                <label>Top Denial Reasons Encountered (Select all that apply)</label>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-top: 0.5rem;">
+                  <label class="checkbox-label"><input type="checkbox" name="denialReason" value="eligibility"> Eligibility / Coverage Inactive</label>
+                  <label class="checkbox-label"><input type="checkbox" name="denialReason" value="auth" checked> Missing Prior Authorization</label>
+                  <label class="checkbox-label"><input type="checkbox" name="denialReason" value="coding" checked> Coding Specificity / ICD-10</label>
+                  <label class="checkbox-label"><input type="checkbox" name="denialReason" value="timely"> Timely Filing Limit Exceeded</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: A/R & COLLECTIONS -->
+          <div class="card shadow-md" id="wizardStep3" style="display: none; background: var(--bg-card);">
+            <div class="card-body" style="padding: 2.5rem;">
+              <h3 style="margin-bottom: 1.5rem; font-size: 1.35rem; color: var(--color-navy);">Accounts Receivable & Collections</h3>
+              <p class="text-secondary" style="margin-bottom: 1.5rem;">Provide your current A/R aging metrics to evaluate cash flow velocity and leakage vulnerability.</p>
+
+              <div class="grid-2-col" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label for="daysInAR">Days in A/R (Average)</label>
+                  <input type="number" id="daysInAR" class="form-control" placeholder="45" value="54">
+                  <small class="text-muted">Industry benchmark: &le; 45 days</small>
+                </div>
+                <div class="form-group">
+                  <label for="agingAROver90">A/R > 90 Days (% of Total A/R)</label>
+                  <input type="number" id="agingAROver90" class="form-control" placeholder="18" value="22">
+                  <small class="text-muted">Industry benchmark: &le; 12%</small>
+                </div>
+                <div class="form-group">
+                  <label for="netCollectionRate">Net Collection Rate (NCR %)</label>
+                  <input type="number" id="netCollectionRate" class="form-control" placeholder="94" value="91">
+                  <small class="text-muted">Industry benchmark: ≥ 96%</small>
+                </div>
+                <div class="form-group">
+                  <label for="badDebtRate">Estimated Bad Debt / Write-off Rate (%)</label>
+                  <input type="number" id="badDebtRate" class="form-control" placeholder="4" value="6">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: DYNAMIC REVENUE INTELLIGENCE & LEAKAGE REPORT -->
+          <div class="card shadow-lg" id="wizardStep4" style="display: none; background: var(--bg-card); border-top: 4px solid var(--color-teal);">
+            <div class="card-body" style="padding: 2.5rem;">
+              <div class="flex-between" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <span class="badge badge-teal">INTELLIGENCE REPORT READY</span>
+                  <h3 style="font-size: 1.75rem; margin-top: 0.25rem; color: var(--color-navy);">Your Revenue Health Summary</h3>
+                </div>
+                <div style="text-align: right;">
+                  <span class="text-muted text-sm">Overall RCM Health Score</span>
+                  <div id="healthScore" style="font-size: 2.25rem; font-weight: 700; color: var(--color-teal);">72/100</div>
+                </div>
+              </div>
+
+              <div id="healthScoreLabel" class="alert alert-warning" style="margin-bottom: 2rem;">
+                Moderate Performance · Significant Optimization Potential
+              </div>
+
+              <!-- Key Leakage Metric Display -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
+                <div class="metric-card bg-subtle" style="border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: var(--radius-lg);">
+                  <span class="metric-label">Estimated Annual Revenue Leakage</span>
+                  <span id="leakageAmount" class="metric-value text-rose" style="font-size: 1.75rem; margin-top: 0.5rem; display: block;">$385,000</span>
+                  <span class="metric-trend text-muted">Recoverable through workflow tuning</span>
+                </div>
+                <div class="metric-card bg-subtle" style="border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: var(--radius-lg);">
+                  <span class="metric-label">Denial Recovery Opportunity</span>
+                  <span id="denialLossVal" class="metric-value text-teal" style="font-size: 1.75rem; margin-top: 0.5rem; display: block;">$210,000</span>
+                  <span class="metric-trend text-muted">Driven by auth & coding gaps</span>
+                </div>
+                <div class="metric-card bg-subtle" style="border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: var(--radius-lg);">
+                  <span class="metric-label">Aged A/R > 90 Days Impact</span>
+                  <span id="agingARLossVal" class="metric-value text-amber" style="font-size: 1.75rem; margin-top: 0.5rem; display: block;">$175,000</span>
+                  <span class="metric-trend text-muted">Cash flow velocity drag</span>
+                </div>
+                <div class="metric-card bg-subtle" style="border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: var(--radius-lg);">
+                  <span class="metric-label">Clean Claim Velocity Drag</span>
+                  <span id="cleanClaimVelocityLossVal" class="metric-value text-teal" style="font-size: 1.75rem; margin-top: 0.5rem; display: block;">$14,000</span>
+                  <span class="metric-trend text-muted">Administrative rework & velocity loss</span>
+                </div>
+              </div>
+
+              <!-- Benchmark Comparison Table -->
+              <h4 style="font-size: 1.1rem; color: var(--color-navy); margin-bottom: 1rem;">Performance vs. Industry Benchmarks</h4>
+              <div style="overflow-x: auto; margin-bottom: 2rem;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                  <thead>
+                    <tr style="border-bottom: 2px solid var(--border-subtle); background: var(--bg-subtle);">
+                      <th style="padding: 0.75rem;">Metric</th>
+                      <th style="padding: 0.75rem;">Your Input</th>
+                      <th style="padding: 0.75rem;">Benchmark</th>
+                      <th style="padding: 0.75rem;">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="benchmarkTableBody">
+                    <!-- Populated by JS -->
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Recommendations List -->
+              <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); margin-bottom: 2rem;">
+                <h4 style="font-size: 1.1rem; color: var(--color-navy); margin-bottom: 1rem;">Targeted Recommendations for Your Operation</h4>
+                <ul id="recommendationsList" style="list-style: disc; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-primary);">
+                  <!-- Populated by JS -->
+                </ul>
+              </div>
+
+              <!-- Action Buttons -->
+              <div style="display: flex; gap: 1rem; justify-content: flex-end; flex-wrap: wrap;">
+                <button type="button" class="btn btn-secondary" id="printReportBtn">Print / Save Report</button>
+                <button type="button" class="btn btn-primary" id="consultationBtn">Schedule Revenue Consultation →</button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Wizard Navigation Bar -->
+          <div class="wizard-nav-bar" style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; padding: 1rem 0;">
+            <button type="button" class="btn btn-secondary" id="wizardPrevBtn" style="display: none;">← Back</button>
+            <div style="margin-left: auto; display: flex; gap: 1rem;">
+              <button type="button" class="btn btn-secondary" id="wizardResetBtn" style="display: none;">Start Over</button>
+              <button type="button" class="btn btn-primary" id="wizardNextBtn">Continue →</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       CORPORATE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="160" style="filter: brightness(0) invert(1);">
+        <p class="footer-tagline">SMARTER RCM. HEALTHIER REVENUE.</p>
+        <p class="text-light text-sm" style="margin-top: 1rem;">Bringing clarity and dependability to healthcare revenue operations without losing sight of patient care.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="health-check.html">RCM Assessment</a></li>
+          <li><a href="case-studies.html">Case studies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>BLOG & RESOURCES</h4>
+        <ul>
+          <li><a href="blog.html">Blog & Resources</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-cta-col">
+        <h4>START A CONVERSATION</h4>
+        <p class="text-light text-sm">Talk with our team about your revenue operations.</p>
+        <a href="contact.html" class="footer-action-link">Request a conversation →</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© CuraSync. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

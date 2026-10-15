@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" width="280" height="56" fill="none" role="img" aria-label="CuraSync Logo">
+  <defs>
+    <linearGradient id="curaNavyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071930" />
+      <stop offset="100%" stop-color="#0B2546" />
+    </linearGradient>
+    <linearGradient id="curaTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="50%" stop-color="#0891B2" />
+      <stop offset="100%" stop-color="#0E7490" />
+    </linearGradient>
+    <linearGradient id="curaCrossHoriz" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#0891B2" />
+    </linearGradient>
+    <filter id="curaShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#071930" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- EMBLEM -->
+  <g transform="translate(4, 3)" filter="url(#curaShadow)">
+    <!-- Squircle Base -->
+    <rect x="2" y="2" width="46" height="46" rx="13" fill="url(#curaNavyGrad)" stroke="#163e74" stroke-width="1" />
+    
+    <!-- Sync Arc 1: Upper Right -->
+    <path d="M 17 11 A 18 18 0 0 1 42 24" stroke="url(#curaTealGrad)" stroke-width="2.75" stroke-linecap="round" fill="none" />
+    <path d="M 44.5 28 L 38.5 23 L 44 21 Z" fill="#06B6D4" />
+
+    <!-- Sync Arc 2: Lower Left -->
+    <path d="M 33 39 A 18 18 0 0 1 8 26" stroke="url(#curaTealGrad)" stroke-width="2.75" stroke-linecap="round" fill="none" />
+    <path d="M 5.5 22 L 11.5 27 L 6 29 Z" fill="#0891B2" />
+
+    <!-- Medical Cross Vertical Bar (White) -->
+    <rect x="22" y="14" width="6" height="22" rx="3" fill="#FFFFFF" opacity="0.95" />
+    
+    <!-- Medical Cross Horizontal Bar (Teal) -->
+    <rect x="14" y="22" width="22" height="6" rx="3" fill="url(#curaCrossHoriz)" />
+
+    <!-- Center Intersection Accent -->
+    <rect x="22" y="22" width="6" height="6" rx="1.5" fill="#38BDF8" opacity="0.9" />
+  </g>
+
+  <!-- LOGO TYPOGRAPHY -->
+  <g id="brand-text">
+    <text x="64" y="31" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="-0.5px">
+      <tspan fill="#0B2546">Cura</tspan><tspan fill="#0891B2">Sync</tspan>
+    </text>
+    <text x="64.5" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="7.5" font-weight="700" fill="#64748B" letter-spacing="1.75px">
+      SMARTER RCM. HEALTHIER REVENUE.
+    </text>
+  </g>
+</svg>

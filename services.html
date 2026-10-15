@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | CuraSync Revenue Cycle Management</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="CuraSync Homepage">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="180">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="health-check.html" class="nav-link">RCM Assessment</a>
+        <a href="case-studies.html" class="nav-link">Case studies</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA & Hamburger -->
+      <div class="header-actions">
+        <a href="health-check.html" class="btn btn-primary btn-sm">Get Your RCM Health Check →</a>
+        <button class="mobile-nav-toggle" id="openDrawerBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="assets/images/logo.svg" alt="CuraSync" width="150">
+      <button class="modal-close" id="closeDrawerBtn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-nav" aria-label="Mobile Navigation Links">
+        <a href="services.html" class="drawer-link active">Services</a>
+        <a href="industries.html" class="drawer-link">Industries</a>
+        <a href="about.html" class="drawer-link">About</a>
+        <a href="health-check.html" class="drawer-link">RCM Revenue Health Check</a>
+        <a href="case-studies.html" class="drawer-link">Case studies</a>
+        <a href="blog.html" class="drawer-link">Blog & Resources</a>
+        <a href="testimonials.html" class="drawer-link">Testimonials</a>
+        <a href="careers.html" class="drawer-link">Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+      <div class="drawer-footer-cta">
+        <a href="health-check.html" class="btn btn-primary btn-block">Get Your RCM Health Check →</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         PAGE HERO
+         ========================================================================== -->
+    <section class="page-hero bg-subtle">
+      <div class="container text-center">
+        <span class="badge badge-teal">SERVICES</span>
+        <h1>Revenue cycle services shaped around your operation.</h1>
+        <p class="page-hero-sub">From patient access through accounts receivable, CuraSync supports the operational work that keeps revenue moving with greater clarity.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7 SERVICE CARDS SECTION
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2-col">
+
+          <!-- Service 1 -->
+          <div class="card card-hover service-detail-card" data-service-id="rcm" role="button" tabindex="0">
+            <div class="card-body">
+              <span class="service-badge">PERSPECTIVE • ACTIVE SERVICE</span>
+              <h3>Revenue cycle management</h3>
+              <p class="text-secondary">Our comprehensive revenue cycle management covers patient access, scheduling, charge capture, claims submission, payment posting, and denial management as a unified operation.</p>
+              <div class="service-card-footer">
+                <span class="link-arrow">View service details →</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="card card-hover service-detail-card" data-service-id="billing" role="button" tabindex="0">
+            <div class="card-body">
+              <span class="service-badge">PERSPECTIVE • ACTIVE SERVICE</span>
+              <h3>Medical billing</h3>
+              <p class="text-secondary">Rigorous billing operations structured around payer guidelines, timely electronic submission, and meticulous secondary insurance coordination.</p>
+              <div class="service-card-footer">
+                <span class="link-arrow">View service details →</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="card card-hover service-detail-card" data-service-id="coding" role="button" tabindex="0">
+            <div class="card-body">
+              <span class="service-badge">PERSPECTIVE • ACTIVE SERVICE</span>
+              <h3>Medical coding</h3>
+              <p class="text-secondary">Certified professional coders (CPC, CCS) specializing in inpatient, outpatient, and specialty care settings, ensuring compliance and optimal specificity.</p>
+              <div class="service-card-footer">
+                <span class="link-arrow">View service details →</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="card card-hover service-detail-card" data-service-id="eligibility" role="button" tabindex="0">
+            <div class="card-body">
+              <span class="service-badge">PERSPECTIVE • ACTIVE SERVICE</span>
+              <h3>Eligibility verification</h3>
+              <p class="text-secondary">Proactive front-end verification ensuring active coverage, copay/deductible requirements, and prior authorizations are fully secured before patient arrival.</p>
+              <div class="service-card-footer">
+                <span class="link-arrow">View service details →</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="card card-hover service-detail-card" data-service-id="denial" role="button" tabindex="0">
+            <div class="card-body">
+              <span class="service-badge">PERSPECTIVE • ACTIVE SERVICE</span>
+              <h3>Denial management</h3>
+              <p class="text-secondary">Systematic root-cause analysis of rejected and denied claims, coupled with rapid appeal turnaround and payer trend reporting.</p>
+              <div class="service-card-footer">
+                <span class="link-arrow">View service details →</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="card card-hover service-detail-card" data-service-id="credentialing" role="button" tabindex="0">
+            <div class="card-body">
+              <span class="service-badge">PERSPECTIVE • ACTIVE SERVICE</span>
+              <h3>Credentialing</h3>
+              <p class="text-secondary">Streamlined provider enrollment across commercial payers, Medicare, and Medicaid, ensuring zero disruption in billing eligibility.</p>
+              <div class="service-card-footer">
+                <span class="link-arrow">View service details →</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="card card-hover service-detail-card" data-service-id="ar" role="button" tabindex="0">
+            <div class="card-body">
+              <span class="service-badge">PERSPECTIVE • ACTIVE SERVICE</span>
+              <h3>Accounts receivable</h3>
+              <p class="text-secondary">Targeted recovery workflows addressing aged A/R buckets, stubborn insurance follow-ups, and patient balance resolution with empathy and clarity.</p>
+              <div class="service-card-footer">
+                <span class="link-arrow">View service details →</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CTA BANNER
+         ========================================================================== -->
+    <section class="cta-banner-section bg-navy" style="margin-top: 3rem;">
+      <div class="container text-center text-white">
+        <h2>Unsure which services fit your current operational bottlenecks?</h2>
+        <p class="cta-sub">Take our Revenue Health Check or start a focused conversation with our team.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="health-check.html" class="btn btn-primary">Take RCM Health Check →</a>
+          <a href="contact.html" class="btn btn-secondary text-white border-white">Start a conversation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       CORPORATE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.svg" alt="CuraSync" width="160" style="filter: brightness(0) invert(1);">
+        <p class="footer-tagline">SMARTER RCM. HEALTHIER REVENUE.</p>
+        <p class="text-light text-sm" style="margin-top: 1rem;">Bringing clarity and dependability to healthcare revenue operations without losing sight of patient care.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="health-check.html">RCM Assessment</a></li>
+          <li><a href="case-studies.html">Case studies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>BLOG & RESOURCES</h4>
+        <ul>
+          <li><a href="blog.html">Blog & Resources</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-cta-col">
+        <h4>START A CONVERSATION</h4>
+        <p class="text-light text-sm">Talk with our team about your revenue operations.</p>
+        <a href="contact.html" class="footer-action-link">Request a conversation →</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© CuraSync. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

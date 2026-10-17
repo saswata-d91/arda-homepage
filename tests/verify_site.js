@@ -418,6 +418,10 @@ test('5. DOM Interactive Structure Verification', async (t) => {
       'recommendationsList',
       'printReportBtn',
       'consultationBtn',
+      'auditRecipientEmail',
+      'sendAuditEmailBtn',
+      'auditDirectMailtoBtn',
+      'auditDispatchAlert',
       // All 17 live metric inputs
       'orgName',
       'contactName',

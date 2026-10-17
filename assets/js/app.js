@@ -1406,6 +1406,114 @@ function calculateHealthCheckResults() {
       window.location.href = 'contact.html';
     };
   }
+
+  // Executive Mailbox Dispatch Integration
+  const recipientEmailInput = document.getElementById('auditRecipientEmail');
+  const orgEmailInput = document.getElementById('orgWorkEmail');
+  const sendEmailBtn = document.getElementById('sendAuditEmailBtn');
+  const mailtoBtn = document.getElementById('auditDirectMailtoBtn');
+  const alertBox = document.getElementById('auditDispatchAlert');
+
+  const initialEmail = orgEmailInput?.value ? orgEmailInput.value.trim() : '';
+  if (recipientEmailInput && !recipientEmailInput.value && initialEmail) {
+    recipientEmailInput.value = initialEmail;
+  }
+
+  const orgName = (document.getElementById('orgName')?.value || 'Healthcare Organization').trim();
+  const contactName = (document.getElementById('orgContactName')?.value || 'Clinical Executive').trim();
+  const orgType = (document.getElementById('orgType')?.value || 'Hospital').trim();
+  const phone = (document.getElementById('orgPhone')?.value || 'N/A').trim();
+  const period = (document.getElementById('reportingPeriod')?.value || 'Current').trim();
+
+  // Construct structured audit body
+  const auditSubject = `CuraSync RCM Health Check Audit: ${orgName} (Score: ${report.score}/100)`;
+  const auditBodyLines = [
+    `CURASYNC RCM REVENUE HEALTH CHECK AUDIT REPORT`,
+    `==============================================`,
+    `Organization: ${orgName}`,
+    `Contact Name: ${contactName}`,
+    `Delivery Email: ${recipientEmailInput?.value || initialEmail || 'Not specified'}`,
+    `Phone: ${phone}`,
+    `Organization Type: ${orgType}`,
+    `Reporting Period: ${period}`,
+    `Quarterly Gross Billing: $${report.quarterlyBilling.toLocaleString()}`,
+    ``,
+    `EXECUTIVE FINANCIAL SUMMARY:`,
+    `- Institutional RCM Health Score: ${report.score} / 100 (${report.scoreLabel})`,
+    `- Estimated Annual Revenue Leakage: $${report.totalLeakage.toLocaleString()}`,
+    `- First-Pass Denial Recovery Opportunity: $${report.denialLoss.toLocaleString()}`,
+    `- Aged A/R Drag (>90 Days): $${report.agingLoss.toLocaleString()}`,
+    `- Clean Claim Velocity Drag: $${report.velocityDrag.toLocaleString()}`,
+    ``,
+    `BENCHMARK COMPARISON:`,
+    `- Clean Claim Rate: ${report.benchmarks.cleanClaimRate.value}% (Benchmark: 95.0%)`,
+    `- Initial Denial Rate: ${report.benchmarks.initialDenialRate.value}% (Benchmark: < 5.0%)`,
+    `- Days in A/R: ${report.benchmarks.daysInAR.value} days (Benchmark: < 35.0 days)`,
+    `- A/R > 90 Days: ${report.benchmarks.agingAROver90.value}% (Benchmark: < 12.0%)`,
+    `- Net Collection Rate: ${report.benchmarks.netCollectionRate.value}% (Benchmark: > 96.0%)`,
+    ``,
+    `PRIORITIZED OPERATIONAL RECOMMENDATIONS:`,
+    ...(report.recommendations.map((r, i) => `${i + 1}. ${r.title}: ${r.desc}`)),
+    ``,
+    `==============================================`,
+    `Generated via CuraSync Revenue Intelligence Platform`,
+    `Live Link: https://saswata-d91.github.io/arda-homepage/health-check.html`
+  ];
+  const auditBodyText = auditBodyLines.join('\r\n');
+
+  function updateMailtoLink() {
+    if (!mailtoBtn) return;
+    const targetEmail = recipientEmailInput?.value ? recipientEmailInput.value.trim() : initialEmail;
+    const mailtoUrl = `mailto:inquiries@curasync.com?cc=${encodeURIComponent(targetEmail)}&subject=${encodeURIComponent(auditSubject)}&body=${encodeURIComponent(auditBodyText)}`;
+    mailtoBtn.setAttribute('href', mailtoUrl);
+  }
+
+  updateMailtoLink();
+  if (recipientEmailInput) {
+    recipientEmailInput.addEventListener('input', updateMailtoLink);
+  }
+
+  if (sendEmailBtn) {
+    sendEmailBtn.onclick = () => {
+      const targetEmail = recipientEmailInput?.value ? recipientEmailInput.value.trim() : '';
+      if (!targetEmail || !targetEmail.includes('@')) {
+        alert('Please enter a valid work email address to deliver your diagnostic report.');
+        if (recipientEmailInput) recipientEmailInput.focus();
+        return;
+      }
+
+      // Save audit to local storage buffer
+      const auditRecord = {
+        refId: generateLeadRefId(),
+        timestamp: new Date().toISOString(),
+        orgName,
+        contactName,
+        recipientEmail: targetEmail,
+        score: report.score,
+        totalLeakage: report.totalLeakage,
+        denialLoss: report.denialLoss
+      };
+
+      if (typeof localStorage !== 'undefined') {
+        try {
+          const stored = JSON.parse(localStorage.getItem('curasync_health_audits') || '[]');
+          stored.unshift(auditRecord);
+          localStorage.setItem('curasync_health_audits', JSON.stringify(stored.slice(0, 50)));
+        } catch (e) {
+          console.warn('Storage quota or disabled', e);
+        }
+      }
+
+      if (alertBox) {
+        alertBox.style.display = 'block';
+        alertBox.innerHTML = `<strong>✓ Diagnostic Report Prepared!</strong> A complete audit summary has been recorded for <strong>${targetEmail}</strong> and CuraSync Advisory (<code>inquiries@curasync.com</code>). Reference: <code>${auditRecord.refId}</code>.`;
+      }
+
+      // Open mailto trigger so user has instant copy in their mail app
+      updateMailtoLink();
+      window.location.href = mailtoBtn.getAttribute('href');
+    };
+  }
 }
 
 /* ==========================================================================
